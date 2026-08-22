@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pre-Derm Society</title>
+
+  <style>
+    /* GENERAL PAGE STYLE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #f7fbfc;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #176b87;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #374151;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #176b87;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #e8f7fa, #ffffff);
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      color: #145c72;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: 19px;
+      color: #4b5563;
+    }
+
+    .button {
+      display: inline-block;
+      background: #176b87;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button:hover {
+      background: #104d61;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 70px 10%;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #145c72;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      color: #4b5563;
+    }
+
+    /* CARDS */
+    .cards {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      width: 280px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .card h3 {
+      color: #176b87;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #6b7280;
+    }
+
+    /* JOIN SECTION */
+    .join {
+      text-align: center;
+      background: #e8f7fa;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #145c72;
+      color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav {
+        padding: 18px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">Pre-Derm Society</div>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#activities">What We Do</a>
+      <a href="#join">Join</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Pre-Derm Society</h1>
+
+    <p>
+      Exploring dermatology, medicine, research, and the many paths
+      toward a career in dermatologic medicine.
+    </p>
+
+    <a href="#about" class="button">Learn More</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Us</h2>
+
+    <p class="intro">
+      The Pre-Derm Society is a student-led organization designed to
+      connect students interested in dermatology and healthcare.
+      Through education, discussion, events, and hands-on opportunities,
+      we aim to help students explore the field and learn more about
+      careers in medicine.
+    </p>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section id="activities">
+    <h2>What We Do</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>🩺 Education</h3>
+        <p>
+          Learn about dermatology, medical careers, and the path toward
+          becoming a physician.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🔬 Research</h3>
+        <p>
+          Explore current topics in dermatology and discover how
+          research contributes to patient care.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🤝 Community</h3>
+        <p>
+          Connect with other students who are interested in medicine
+          and dermatology.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section id="join" class="join">
+    <h2>Interested in Joining?</h2>
+
+    <p class="intro">
+      Follow our upcoming events and learn how you can become involved
+      with the Pre-Derm Society.
+    </p>
+
+    <br>
+
+    <a href="mailto:YOUR-EMAIL-HERE" class="button">
+      Contact Us
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Pre-Derm Society</p>
+  </footer>
+
+</body>
+</html>
