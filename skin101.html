@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Skin 101 | Pre-Derm Society</title>
+  <title>Skin Science 01 | Pre-Derm Society</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -13,119 +17,218 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #f8f5f0;
       color: #27221e;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
     nav {
-      padding: 18px 25px;
-      border-bottom: 1px solid #ddd5cc;
-      background: #f8f5f0;
+      border-bottom: 1px solid #ded7cf;
+      padding: 19px 25px;
     }
 
-    nav a {
-      color: #27221e;
-      text-decoration: none;
-      font-weight: bold;
-      letter-spacing: 1px;
-      font-size: 13px;
-    }
-
-    main {
-      max-width: 850px;
+    .nav {
+      max-width: 900px;
       margin: auto;
-      padding: 60px 25px 100px;
     }
 
     .back {
-      margin-bottom: 45px;
-      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .back:hover {
+      opacity: 0.55;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 25px 110px;
     }
 
     .label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2.8px;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 12px;
-      color: #776b61;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 9vw, 85px);
-      line-height: 0.95;
-      margin-bottom: 20px;
+      color: #81766c;
     }
 
     .intro {
-      font-size: 19px;
-      color: #665d56;
-      margin-bottom: 45px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid #ded7cf;
     }
 
-    .lesson {
-      background: #fbf9f6;
-      border: 1px solid #ddd5cc;
-      border-radius: 22px;
-      padding: 35px;
-      margin-bottom: 25px;
-    }
-
-    .lesson h2 {
-      margin-bottom: 12px;
-      font-size: 28px;
-    }
-
-    .lesson p {
-      color: #665d56;
-    }
-
-    .quiz {
-      background: #e8dfd5;
-      padding: 35px;
-      border-radius: 22px;
-      margin-top: 35px;
-    }
-
-    .quiz h2 {
+    .intro .label {
       margin-bottom: 20px;
     }
 
-    .question {
+    h1 {
+      font-size: clamp(50px, 9vw, 90px);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      font-weight: 500;
       margin-bottom: 25px;
     }
 
-    .question p {
-      font-weight: bold;
+    .intro p {
+      max-width: 650px;
+      color: #6d645d;
+      font-size: 17px;
+    }
+
+    .lesson {
+      padding: 65px 0;
+      border-bottom: 1px solid #ded7cf;
+    }
+
+    .lesson-number {
+      font-size: 10px;
+      color: #81766c;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 500;
+      letter-spacing: -1.8px;
+      line-height: 1;
+      margin-bottom: 22px;
+    }
+
+    .lesson p {
+      max-width: 700px;
+      color: #625a54;
+      font-size: 16px;
+    }
+
+    .layer-grid {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #ded7cf;
+      border: 1px solid #ded7cf;
+    }
+
+    .layer {
+      background: #f8f5f0;
+      padding: 28px;
+    }
+
+    .layer strong {
+      display: block;
+      font-size: 19px;
+      font-weight: 500;
       margin-bottom: 10px;
     }
 
-    button {
-      border: none;
-      background: #27221e;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 20px;
-      cursor: pointer;
-      margin: 5px;
+    .layer span {
+      color: #6d645d;
       font-size: 14px;
     }
 
+    .quiz {
+      margin-top: 65px;
+      padding: 45px;
+      background: #eee8e0;
+    }
+
+    .quiz h2 {
+      margin-bottom: 10px;
+    }
+
+    .quiz-intro {
+      color: #6d645d;
+      margin-bottom: 35px;
+    }
+
+    .question {
+      padding: 25px 0;
+      border-top: 1px solid #d8d0c7;
+    }
+
+    .question:first-of-type {
+      border-top: none;
+    }
+
+    .question p {
+      color: #27221e;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    button {
+      border: 1px solid #27221e;
+      background: transparent;
+      color: #27221e;
+      padding: 10px 15px;
+      margin: 4px;
+      border-radius: 30px;
+      font-family: inherit;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
     button:hover {
-      opacity: 0.85;
+      background: #27221e;
+      color: white;
     }
 
     #result {
-      margin-top: 20px;
-      font-weight: bold;
-      font-size: 18px;
+      margin-top: 25px;
+      font-weight: 600;
     }
 
     .finish {
-      margin-top: 45px;
       text-align: center;
+      padding: 80px 0 20px;
+    }
+
+    .finish p {
+      color: #6d645d;
+      margin: 15px auto 25px;
+      max-width: 550px;
+    }
+
+    .home-link {
+      display: inline-block;
+      border-bottom: 1px solid #27221e;
+      padding-bottom: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        padding: 60px 22px 90px;
+      }
+
+      .layer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz {
+        padding: 30px 22px;
+      }
     }
   </style>
 </head>
@@ -133,144 +236,242 @@
 <body>
 
   <nav>
-    <a href="index.html">← PRE-DERM SOCIETY</a>
+    <div class="nav">
+      <a href="index.html" class="back">
+        ← Pre-Derm Society
+      </a>
+    </div>
   </nav>
+
 
   <main>
 
-    <a href="index.html" class="back">← Back to Society</a>
+    <!-- INTRO -->
+    <section class="intro">
 
-    <div class="label">Mini Lesson • 10–15 Minutes</div>
+      <div class="label">
+        Skin Science 01 · Foundations
+      </div>
 
-    <h1>SKIN 101 🧬</h1>
-
-    <p class="intro">
-      Welcome! In this mini lesson, you'll learn the basic
-      structure and functions of skin, then test what you've learned.
-    </p>
-
-    <div class="lesson">
-      <h2>01 — What is skin?</h2>
+      <h1>
+        The science<br>
+        of skin.
+      </h1>
 
       <p>
-        Skin is the body's largest organ. It forms a protective
-        barrier between your body and the outside environment.
-        It also helps with sensation, temperature regulation,
-        and protection.
+        Before exploring dermatology, it helps to understand
+        the organ dermatologists study every day. Let's start
+        with the fundamentals.
       </p>
-    </div>
 
-    <div class="lesson">
-      <h2>02 — The three main layers</h2>
+    </section>
+
+
+    <!-- LESSON 1 -->
+    <section class="lesson">
+
+      <div class="lesson-number">
+        01 · The basics
+      </div>
+
+      <h2>
+        What is skin?
+      </h2>
 
       <p>
-        <strong>Epidermis:</strong> The outermost layer of skin.
-        It provides much of the body's protective barrier.
+        Skin is the body's largest organ. It creates a protective
+        boundary between the body and its environment while also
+        contributing to sensation and temperature regulation.
       </p>
 
-      <br>
+    </section>
+
+
+    <!-- LESSON 2 -->
+    <section class="lesson">
+
+      <div class="lesson-number">
+        02 · Structure
+      </div>
+
+      <h2>
+        Three major layers.
+      </h2>
 
       <p>
-        <strong>Dermis:</strong> The layer underneath the epidermis.
-        It contains structures such as blood vessels, nerves,
-        hair follicles, and glands.
+        Skin is organized into layers, each with different
+        structures and functions.
       </p>
 
-      <br>
+      <div class="layer-grid">
+
+        <div class="layer">
+          <strong>01 · Epidermis</strong>
+          <span>
+            The outermost layer and an important part
+            of the body's protective barrier.
+          </span>
+        </div>
+
+        <div class="layer">
+          <strong>02 · Dermis</strong>
+          <span>
+            Contains structures including nerves,
+            blood vessels, glands, and hair follicles.
+          </span>
+        </div>
+
+        <div class="layer">
+          <strong>03 · Subcutaneous tissue</strong>
+          <span>
+            Deeper tissue containing connective tissue
+            and fat that helps cushion and insulate.
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- LESSON 3 -->
+    <section class="lesson">
+
+      <div class="lesson-number">
+        03 · Function
+      </div>
+
+      <h2>
+        More than a barrier.
+      </h2>
 
       <p>
-        <strong>Subcutaneous tissue:</strong> The deeper layer
-        beneath the dermis that contains connective tissue
-        and fat and helps cushion and insulate the body.
+        Skin helps protect the body, allows us to sense our
+        surroundings, and plays an important role in maintaining
+        body temperature. It is constantly interacting with
+        the world around us.
       </p>
-    </div>
 
-    <div class="lesson">
-      <h2>03 — Why does skin matter?</h2>
+    </section>
 
-      <p>
-        Skin is constantly interacting with the environment.
-        It helps protect the body, allows us to sense our surroundings,
-        and contributes to maintaining a stable internal temperature.
+
+    <!-- QUIZ -->
+    <section class="quiz">
+
+      <div class="label">
+        Knowledge check
+      </div>
+
+      <h2>
+        What did you learn?
+      </h2>
+
+      <p class="quiz-intro">
+        Three questions. No pressure — this is just a chance
+        to test your understanding.
       </p>
-    </div>
 
-    <!-- INTERACTIVE QUIZ -->
-
-    <div class="quiz">
-
-      <h2>Quick Check 🧠</h2>
 
       <div class="question">
-        <p>1. Which layer is the outermost layer of skin?</p>
 
-        <button onclick="answer(1, 'correct')">
+        <p>
+          1. Which is the outermost layer of skin?
+        </p>
+
+        <button onclick="answer(1, true)">
           Epidermis
         </button>
 
-        <button onclick="answer(1, 'wrong')">
+        <button onclick="answer(1, false)">
           Dermis
         </button>
 
-        <button onclick="answer(1, 'wrong')">
+        <button onclick="answer(1, false)">
           Subcutaneous tissue
         </button>
+
       </div>
 
-      <div class="question">
-        <p>2. Which layer contains structures such as nerves and blood vessels?</p>
 
-        <button onclick="answer(2, 'wrong')">
+      <div class="question">
+
+        <p>
+          2. Which layer contains nerves and blood vessels?
+        </p>
+
+        <button onclick="answer(2, false)">
           Epidermis
         </button>
 
-        <button onclick="answer(2, 'correct')">
+        <button onclick="answer(2, true)">
           Dermis
         </button>
 
-        <button onclick="answer(2, 'wrong')">
-          Hair shaft
+        <button onclick="answer(2, false)">
+          Subcutaneous tissue
         </button>
+
       </div>
 
-      <div class="question">
-        <p>3. What is one important function of skin?</p>
 
-        <button onclick="answer(3, 'correct')">
+      <div class="question">
+
+        <p>
+          3. Which is a function of skin?
+        </p>
+
+        <button onclick="answer(3, true)">
           Protection
         </button>
 
-        <button onclick="answer(3, 'wrong')">
+        <button onclick="answer(3, false)">
+          Pumping blood
+        </button>
+
+        <button onclick="answer(3, false)">
           Producing bones
         </button>
 
-        <button onclick="answer(3, 'wrong')">
-          Pumping blood
-        </button>
       </div>
+
 
       <div id="result">
-        Answer the questions above!
+        Score: 0 / 3
       </div>
 
-    </div>
+    </section>
 
-    <div class="finish">
-      <h2>🎉 You finished Skin 101!</h2>
+
+    <!-- FINISH -->
+    <section class="finish">
+
+      <div class="label">
+        Complete
+      </div>
+
+      <h2>
+        You've finished Skin Science 01.
+      </h2>
 
       <p>
-        Keep exploring Pre-Derm Society to learn more about
-        dermatology and skin science.
+        Keep exploring Pre-Derm Society for more lessons
+        on dermatology and skin science.
       </p>
-    </div>
+
+      <a href="index.html" class="home-link">
+        Back to Pre-Derm Society →
+      </a>
+
+    </section>
 
   </main>
+
 
   <script>
     let score = 0;
     let answered = {};
 
-    function answer(question, result) {
+    function answer(question, correct) {
 
       if (answered[question]) {
         return;
@@ -278,22 +479,16 @@
 
       answered[question] = true;
 
-      if (result === "correct") {
+      if (correct) {
         score++;
       }
 
-      document.getElementById("result").textContent =
-        "Score: " + score + " / 3";
+      const result = document.getElementById("result");
 
       if (Object.keys(answered).length === 3) {
-
-        if (score === 3) {
-          document.getElementById("result").textContent =
-            "🎉 Perfect! You got 3 / 3!";
-        } else {
-          document.getElementById("result").textContent =
-            "Nice work! You got " + score + " / 3.";
-        }
+        result.textContent = "Final score: " + score + " / 3";
+      } else {
+        result.textContent = "Score: " + score + " / 3";
       }
     }
   </script>
