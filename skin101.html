@@ -468,30 +468,16 @@
 
 
   <script>
-    let score = 0;
-    let answered = {};
+  let score = 0;
+  let answered = {};
 
-    function answer(question, correct) {
+  function answer(question, correct, button) {
 
-      if (answered[question]) {
-        return;
-      }
-
-      answered[question] = true;
-
-      if (correct) {
-        score++;
-      }
-
-      const result = document.getElementById("result");
-
-      if (Object.keys(answered).length === 3) {
-        result.textContent = "Final score: " + score + " / 3";
-      } else {
-        result.textContent = "Score: " + score + " / 3";
-      }
+    // Don't allow the same question to be answered twice
+    if (answered[question]) {
+      return;
     }
-  </script>
 
-</body>
-</html>
+    answered[question] = true;
+
+    // Add a
