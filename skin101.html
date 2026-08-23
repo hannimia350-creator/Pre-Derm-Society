@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,7 +9,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;500;600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <style>
 
@@ -35,7 +39,7 @@
     }
 
 
-    /* NAVIGATION */
+    /* NAV */
 
     nav {
       border-bottom: 1px solid #e8e8e8;
@@ -46,6 +50,7 @@
       max-width: 1050px;
       margin: auto;
       padding: 20px 25px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -76,9 +81,6 @@
       margin: auto;
       padding: 90px 25px 120px;
     }
-
-
-    /* LABELS */
 
     .label {
       font-size: 9px;
@@ -117,7 +119,7 @@
     }
 
 
-    /* LESSON SECTIONS */
+    /* LESSONS */
 
     .lesson {
       padding: 75px 0;
@@ -149,12 +151,14 @@
     }
 
 
-    /* SKIN LAYERS */
+    /* LAYERS */
 
     .layer-grid {
       margin-top: 45px;
+
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+
       border-top: 1px solid #dcdcdc;
       border-bottom: 1px solid #dcdcdc;
     }
@@ -189,7 +193,7 @@
     }
 
 
-    /* KNOWLEDGE CHECK */
+    /* QUIZ */
 
     .quiz {
       margin-top: 80px;
@@ -223,10 +227,13 @@
       border: 1px solid #111111;
       background: #ffffff;
       color: #111111;
+
       padding: 10px 18px;
       margin: 4px;
+
       font-family: inherit;
       font-size: 12px;
+
       cursor: pointer;
       transition: all 0.2s ease;
     }
@@ -260,6 +267,7 @@
       border-top: 1px solid #dddddd;
       margin-top: 25px;
       padding-top: 25px;
+
       font-size: 15px;
       font-weight: 600;
     }
@@ -279,14 +287,17 @@
     .finish p {
       max-width: 520px;
       margin: 20px auto 30px;
+
       color: #666666;
       font-size: 14px;
     }
 
     .home-link {
       display: inline-block;
+
       border-bottom: 1px solid #111111;
       padding-bottom: 5px;
+
       font-size: 10px;
       font-weight: 600;
       letter-spacing: 1.6px;
@@ -325,6 +336,7 @@
       font-size: 9px;
       font-weight: 600;
       letter-spacing: 1.7px;
+
       border-bottom: 1px solid #111111;
       padding-bottom: 4px;
     }
@@ -388,6 +400,7 @@
     }
 
   </style>
+
 </head>
 
 
@@ -411,7 +424,6 @@
     </div>
 
   </nav>
-
 
 
   <main>
@@ -439,8 +451,7 @@
     </section>
 
 
-
-    <!-- SECTION 01 -->
+    <!-- LESSON 01 -->
 
     <section class="lesson">
 
@@ -461,8 +472,7 @@
     </section>
 
 
-
-    <!-- SECTION 02 -->
+    <!-- LESSON 02 -->
 
     <section class="lesson">
 
@@ -543,8 +553,7 @@
     </section>
 
 
-
-    <!-- SECTION 03 -->
+    <!-- LESSON 03 -->
 
     <section class="lesson">
 
@@ -566,7 +575,6 @@
     </section>
 
 
-
     <!-- QUIZ -->
 
     <section class="quiz">
@@ -582,7 +590,6 @@
       <p class="quiz-intro">
         Three questions. Select one answer for each.
       </p>
-
 
 
       <!-- QUESTION 1 -->
@@ -619,7 +626,6 @@
       </div>
 
 
-
       <!-- QUESTION 2 -->
 
       <div class="question">
@@ -652,7 +658,6 @@
         </div>
 
       </div>
-
 
 
       <!-- QUESTION 3 -->
@@ -689,13 +694,11 @@
       </div>
 
 
-
       <div id="result">
         Score: 0 / 3
       </div>
 
     </section>
-
 
 
     <!-- FINISH -->
@@ -712,8 +715,7 @@
 
       <p>
         You've completed the first Pre-Derm Society
-        foundation lesson. More lessons can build from
-        these fundamentals.
+        foundation lesson.
       </p>
 
       <a href="index.html" class="home-link">
@@ -726,8 +728,7 @@
   </main>
 
 
-
-  <!-- FOOTER / SOCIALS -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -739,17 +740,15 @@
 
       <div class="footer-links">
 
-        <!-- Replace these with your real usernames -->
-
         <a
-          href="https://www.tiktok.com/@YOUR_TIKTOK_USERNAME"
+          href="https://www.tiktok.com/@prederm_society"
           target="_blank"
           rel="noopener noreferrer">
           TIKTOK
         </a>
 
         <a
-          href="https://www.instagram.com/YOUR_INSTAGRAM_USERNAME"
+          href="https://www.instagram.com/prederm_society"
           target="_blank"
           rel="noopener noreferrer">
           INSTAGRAM
@@ -772,7 +771,6 @@
     </div>
 
   </footer>
-
 
 
   <!-- QUIZ JAVASCRIPT -->
@@ -820,9 +818,8 @@
 
       const question = button.closest(".question");
 
-      const buttons = question.querySelectorAll(
-        ".answer-button"
-      );
+      const buttons =
+        question.querySelectorAll(".answer-button");
 
       buttons.forEach(function(btn) {
         btn.disabled = true;
