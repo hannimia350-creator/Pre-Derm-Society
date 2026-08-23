@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Skin 101 | Pre-Derm Society</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f5f1;
+  color: #171717;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.lesson {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 24px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.progress {
+  color: #777;
+}
+
+main {
+  flex: 1;
+  width: 86%;
+  max-width: 900px;
+  margin: auto;
+  padding: 50px 0 100px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(52px, 11vw, 100px);
+  font-weight: 400;
+  line-height: .9;
+  letter-spacing: -5px;
+  margin: 0 0 25px;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 7vw, 70px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -3px;
+  margin: 0 0 25px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  max-width: 680px;
+}
+
+.small {
+  font-size: 14px;
+  color: #777;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 35px;
+}
+
+button.option {
+  border: 1px solid #d6d2ca;
+  background: #fbfaf7;
+  padding: 22px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+button.option:hover {
+  transform: translateY(-2px);
+  background: #eeebe5;
+}
+
+button.option.correct {
+  background: #e7eee5;
+  border-color: #aab9a7;
+}
+
+button.option.wrong {
+  background: #f1e5e1;
+  border-color: #c8aaa0;
+}
+
+.feedback {
+  min-height: 30px;
+  margin-top: 18px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.layer {
+  border-left: 2px solid #222;
+  padding: 20px 25px;
+  margin: 12px 0;
+  background: #fbfaf7;
+}
+
+.layer strong {
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.layer span {
+  display: block;
+  margin-top: 8px;
+  color: #666;
+}
+
+.controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 7%;
+  background: rgba(247,245,241,.95);
+  border-top: 1px solid #ddd9d2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  border: 1px solid #222;
+  background: #171717;
+  color: white;
+  padding: 13px 22px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.nav.back {
+  background: transparent;
+  color: #171717;
+}
+
+.hidden {
+  display: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.big {
+  font-family: Georgia, serif;
+  font-size: clamp(45px, 9vw, 90px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding-top: 35px;
+  }
+
+  h1 {
+    letter-spacing: -3px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="lesson">
+
+<header>
+  <div class="logo">Pre-Derm Society</div>
+  <div class="progress" id="progress">1 / 8</div>
+</header>
+
+<main>
+
+<!-- SLIDE 1 -->
+<section class="slide" id="slide1">
+  <div class="eyebrow">Youth Skin Health Education</div>
+
+  <h1>SKIN<br>101</h1>
+
+  <p>
+    Meet the science behind your skin.
+  </p>
+
+  <p class="small">
+    A free 10–15 minute introduction to skin science.
+  </p>
+</section>
+
+
+<!-- SLIDE 2 -->
+<section class="slide hidden" id="slide2">
+
+  <div class="eyebrow">01 — Start here</div>
+
+  <h2>What does your skin actually do?</h2>
+
+  <p>
+    Choose the answers you think are important jobs of your skin.
+  </p>
+
+  <div class="cards">
+
+    <button class="option" onclick="answer(this, true)">
+      Protection
+    </button>
+
+    <button class="option" onclick="answer(this, false)">
+      Digestion
+    </button>
+
+    <button class="option" onclick="answer(this, true)">
+      Sensation
+    </button>
+
+    <button class="option" onclick="answer(this, false)">
+      Photosynthesis
+    </button>
+
+  </div>
+
+  <div class="feedback" id="feedback2"></div>
+
+</section>
+
+
+<!-- SLIDE 3 -->
+<section class="slide hidden" id="slide3">
+
+  <div class="eyebrow">02 — Skin science</div>
+
+  <h2>Your skin is an organ.</h2>
+
+  <p>
+    Your skin is living tissue with important jobs that help protect your body
+    and interact with the environment around you.
+  </p>
+
+  <p>
+    Skin health is about understanding how skin works — not about looking
+    “perfect.”
+  </p>
+
+</section>
+
+
+<!-- SLIDE 4 -->
+<section class="slide hidden" id="slide4">
+
+  <div class="eyebrow">03 — The basics</div>
+
+  <h2>Meet the three main layers.</h2>
+
+  <div class="layer">
+    <strong>EPIDERMIS</strong>
+    <span>The outermost layer of skin.</span>
+  </div>
+
+  <div class="layer">
+    <strong>DERMIS</strong>
+    <span>
+      Contains structures including blood vessels, nerves,
+      hair follicles and glands.
+    </span>
+  </div>
+
+  <div class="layer">
+    <strong>SUBCUTANEOUS LAYER</strong>
+    <span>
+      A deeper layer containing connective tissue and fat.
+    </span>
+  </div>
+
+</section>
+
+
+<!-- SLIDE 5 -->
+<section class="slide hidden" id="slide5">
+
+  <div class="eyebrow">04 — Quick challenge</div>
+
+  <h2>Which layer am I?</h2>
+
+  <p>
+    “I'm the outermost layer of skin.”
+  </p>
+
+  <div class="cards">
+
+    <button class="option" onclick="layerAnswer(this, true)">
+      Epidermis
+    </button>
+
+    <button class="option" onclick="layerAnswer(this, false)">
+      Dermis
+    </button>
+
+    <button class="option" onclick="layerAnswer(this, false)">
+      Subcutaneous layer
+    </button>
+
+  </div>
+
+  <div class="feedback" id="feedback5"></div>
+
+</section>
+
+
+<!-- SLIDE 6 -->
+<section class="slide hidden" id="slide6">
+
+  <div class="eyebrow">05 — Skin barrier</div>
+
+  <h2>What is the skin barrier?</h2>
+
+  <p>
+    The outer part of the skin helps form a protective barrier between
+    your body and the outside environment.
+  </p>
+
+  <p>
+    It also helps limit water loss.
+  </p>
+
+  <p>
+    <strong>Think: protect + maintain + defend.</strong>
+  </p>
+
+</section>
+
+
+<!-- SLIDE 7 -->
+<section class="slide hidden" id="slide7">
+
+  <div class="eyebrow">06 — Think critically</div>
+
+  <h2>Science or social media?</h2>
+
+  <p>
+    “This skincare trick works for EVERYONE.”
+  </p>
+
+  <p>
+    Would you automatically believe it?
+  </p>
+
+  <div class="cards">
+
+    <button class="option" onclick="claimAnswer(this, false)">
+      Yes — if someone online says it works.
+    </button>
+
+    <button class="option" onclick="claimAnswer(this, true)">
+      No — I should check the evidence first.
+    </button>
+
+  </div>
+
+  <div class="feedback" id="feedback7"></div>
+
+</section>
+
+
+<!-- SLIDE 8 -->
+<section class="slide hidden" id="slide8">
+
+  <div class="eyebrow">07 — Digital literacy</div>
+
+  <h2>How do we check a claim?</h2>
+
+  <div class="cards">
+
+    <div class="layer">
+      <strong>WHO?</strong>
+      <span>Who made the claim?</span>
+    </div>
+
+    <div class="layer">
+      <strong>EVIDENCE?</strong>
+      <span>What evidence supports it?</span>
+    </div>
+
+    <div class="layer">
+      <strong>MOTIVE?</strong>
+      <span>Are they trying to sell something?</span>
+    </div>
+
+    <div class="layer">
+      <strong>VERIFY?</strong>
+      <span>Can you check it with a trustworthy source?</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FINAL -->
+<section class="slide hidden center" id="slide9">
+
+  <div class="eyebrow">Pre-Derm Society</div>
+
+  <div class="big">
+    You finished<br>
+    Skin 101.
+  </div>
+
+  <p style="margin:30px auto;">
+    Your skin is science.
+  </p>
+
+  <p class="small" style="margin:auto;">
+    Learn about it. Ask questions. Check your sources.
+  </p>
+
+</section>
+
+</main>
+
+
+<div class="controls">
+
+  <button class="nav back" onclick="previousSlide()">
+    ← Back
+  </button>
+
+  <button class="nav" onclick="nextSlide()">
+    Next →
+  </button>
+
+</div>
+
+</div>
+
+
+<script>
+
+let currentSlide = 1;
+const totalSlides = 9;
+
+function showSlide(number) {
+
+  document.querySelectorAll(".slide").forEach(slide => {
+    slide.classList.add("hidden");
+  });
+
+  document
+    .getElementById("slide" + number)
+    .classList.remove("hidden");
+
+  document.getElementById("progress").innerText =
+    number + " / " + totalSlides;
+
+  currentSlide = number;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+function nextSlide() {
+
+  if (currentSlide < totalSlides) {
+    showSlide(currentSlide + 1);
+  }
+
+}
+
+function previousSlide() {
+
+  if (currentSlide > 1) {
+    showSlide(currentSlide - 1);
+  }
+
+}
+
+function answer(button, correct) {
+
+  const feedback =
+    document.getElementById("feedback2");
+
+  if (correct) {
+
+    button.classList.add("correct");
+
+    feedback.innerText =
+      "✓ Correct! Skin helps protect the body and lets us sense the world around us.";
+
+  } else {
+
+    button.classList.add("wrong");
+
+    feedback.innerText =
+      "Not quite — think about the jobs skin performs for your body.";
+
+  }
+
+}
+
+function layerAnswer(button, correct) {
+
+  const feedback =
+    document.getElementById("feedback5");
+
+  if (correct) {
+
+    button.classList.add("correct");
+
+    feedback.innerText =
+      "✓ Correct! The epidermis is the outermost layer.";
+
+  } else {
+
+    button.classList.add("wrong");
+
+    feedback.innerText =
+      "Not quite. Try again!";
+
+  }
+
+}
+
+function claimAnswer(button, correct) {
+
+  const feedback =
+    document.getElementById("feedback7");
+
+  if (correct) {
+
+    button.classList.add("correct");
+
+    feedback.innerText =
+      "✓ Exactly. Health information should be checked against trustworthy evidence.";
+
+  } else {
+
+    button.classList.add("wrong");
+
+    feedback.innerText =
+      "Try again. A claim online isn't automatically reliable.";
+
+  }
+
+}
+
+</script>
+
+</body>
+</html>
